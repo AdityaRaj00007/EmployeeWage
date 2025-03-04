@@ -86,7 +86,7 @@ while (totalHoursWorked < MAX_HRS_IN_MONTH && totalWorkingDays < MAX_WORKING_DAY
 // Calculate final employee wage
 let finalEmpWage = totalHoursWorked * WAGE_PER_HOUR;
 
-// Print final wage details
+// Print final wages
 console.log("UC-5 - Total Days Worked: " + totalWorkingDays);
 console.log("UC-5 - Total Hours Worked: " + totalHoursWorked);
 console.log("UC-5 - Total Employee Wage: " + finalEmpWage);
