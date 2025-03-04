@@ -69,3 +69,24 @@ let totalEmpWage = totalEmpHrs * WAGE_PER_HOUR;
 // Print Total Hours and Monthly Wage
 console.log("Total Hours Worked: " + totalEmpHrs);
 console.log("Total Monthly Wage: " + totalEmpWage);
+// UC-5: Calculate Wages till Total Working Hours 160 or Max Days 20 is Reached
+const MAX_HRS_IN_MONTH = 160;
+const MAX_WORKING_DAYS = 20;
+
+let totalWorkingDays = 0;
+let totalHoursWorked = 0;
+
+// Loop until max hours or max days is reached
+while (totalHoursWorked < MAX_HRS_IN_MONTH && totalWorkingDays < MAX_WORKING_DAYS) {
+    totalWorkingDays++;
+    let empCheck = Math.floor(Math.random() * 10) % 3;
+    totalHoursWorked += getWorkingHours(empCheck);
+}
+
+// Calculate final employee wage
+let finalEmpWage = totalHoursWorked * WAGE_PER_HOUR;
+
+// Print final wage details
+console.log("UC-5 - Total Days Worked: " + totalWorkingDays);
+console.log("UC-5 - Total Hours Worked: " + totalHoursWorked);
+console.log("UC-5 - Total Employee Wage: " + finalEmpWage);
