@@ -290,9 +290,21 @@ class EmployeePayrollData {
     }
 }
 // Creating an instance
-let employeePayrollData = new EmployeePayrollData(1, "Mark", 30000);
-console.log( "UC-11 : "+ employeePayrollData.toString());
+let employeePayrollData = new EmployeePayrollData(1, "Mark", 30000, "M", new Date());
+console.log("UC-11 : " + employeePayrollData.toString());
 
-// Updating the name
-employeePayrollData.name = "John";
-console.log("UC-11 : "+ employeePayrollData.toString());
+// Updating the name with try-catch for error handling
+try {
+    employeePayrollData.name = "John";
+    console.log("UC-11 : " + employeePayrollData.toString());
+} catch (e) {
+    console.error(e);
+}
+
+// Creating another instance with valid data
+try {
+    let newEmployeePayrollData = new EmployeePayrollData(2, "Terrisa", 30000, "F", new Date());
+    console.log("UC-11 : " + newEmployeePayrollData.toString());
+} catch (e) {
+    console.error(e);
+}
