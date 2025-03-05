@@ -273,7 +273,6 @@ class EmployeePayrollData {
         this.gender = gender;
         this.startDate = startDate;
     }
-
     // Getter and Setter for name
     get name() {
         return this._name;
