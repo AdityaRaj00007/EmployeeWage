@@ -308,3 +308,10 @@ try {
 } catch (e) {
     console.error(e);
 }
+// Testing invalid cases
+try {
+    let invalidEmployee = new EmployeePayrollData(-1, "Aditya", -1000, "X", new Date("2025-03-05"));
+    console.log("UC-14 : " + invalidEmployee.toString());
+} catch (e) {
+    console.error("UC-14 Error: " + e.message);
+}
